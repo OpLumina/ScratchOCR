@@ -1,0 +1,28 @@
+# --- SANS-SERIF (Modern & Clean) ---
+Arial.ttf
+Helvetica.ttf
+Verdana.ttf
+Tahoma.ttf
+TrebuchetMS.ttf
+Roboto-Regular.ttf
+OpenSans-Regular.ttf
+Lato-Regular.ttf
+# --- SERIF (Formal & Books) ---
+TimesNewRoman.ttf
+Georgia.ttf
+Garamond.ttf
+Baskerville.ttf
+Palatino.ttf
+LibreBaskerville-Regular.ttf
+# --- MONOSPACED (Invoices & Code) ---
+CourierNew.ttf
+Consolas.ttf
+LucidaConsole.ttf
+Courier.ttf
+Inconsolata.ttf
+RobotoMono-Regular.ttf
+# --- DOCUMENT SPECIFIC ---
+Calibri.ttf
+Cambria.ttf
+CenturyGothic.ttf
+FranklinGothic.ttf

@@ -1,0 +1,32 @@
+1: Generated general scripts for saving a neural network for both words and characters seperately
+2: made a script to make a json file as follows for a txt list of chars/words:
+[
+    {
+        "solution": "correct",
+        "rotation": 0, (every 5 degrees each)
+        "font": "font", (iterates through every font for every char/word at every rotation)
+        "filepath": "char training data/data/correct_font_rotation.png"
+    }
+]
+
+
+Gathered data of txt lists of: 
+Fonts, characters, and english words
+
+🟢 Project Status: What has been done so far
+Core Brain (model.py): Created a custom ScratchOCR class that handles Sigmoid activation, Feedforward logic, and Backpropagation for learning. It includes custom save and load methods that store weights in .npz format.
+Modular Neural Networks: Separated the logic into two distinct brains:neuralnetletters: A 32 x 32 network optimized for individual characters.neuralnetwords: A 128 x 32 network for full-word recognition.
+Data Synthesizer (generate_training_data.py): Developed a powerful tool that reads list-of-fonts.txt and automatically renders thousands of training images using different fonts, 5-degree rotations, and random pixel jitter.
+
+Training Engines: Created specific scripts (train_chars.py and train.py) that "update" the existing brain weights rather than overwriting them, allowing for incremental learning.
+
+
+
+1. Optimal Training Data DistributionFor a robust model, your corpus.txt and font selections should follow this "Golden Ratio" of data types:CategoryPercentagePurposeClean Synthetic40%Standard fonts on black/white backgrounds. Teaches the "perfect" shape of letters.Degraded/Noisy30%Added Gaussian noise, motion blur, or "ink bleed" effects. Simulates low-quality scans.Structured/Symbols15%Invoices, dates, and math symbols. These are "low frequency" but "high importance" in documents.Perspective/Skew15%Subtle rotations ($\pm 1^\circ$ to $5^\circ$) and "shearing." Simulates camera-captured documents.
+
+Photos made by the generation script were not working because rotation was making the training data go out of frame. Had to make the math to calculate image height and width based on character lengths
+
+Eventually scratched the idea of AI Deskew detection and replaced it with math based approach
+
+12/26/2025 done
+12/27/2025:
